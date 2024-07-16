@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
 
 class AutoSpeechPage extends StatefulWidget {
-  const AutoSpeechPage({Key? key}) : super(key: key);
+  const AutoSpeechPage({super.key});
 
   @override
   State<AutoSpeechPage> createState() => _AutoSpeechPageState();
