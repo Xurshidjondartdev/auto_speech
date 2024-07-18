@@ -1,4 +1,4 @@
-import 'package:auto_speech/screen/auto_speech.dart';
+import 'package:auto_speech/screen/splash_page.dart';
 import 'package:flutter/material.dart';
 
 class App extends StatelessWidget {
@@ -8,7 +8,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: AutoSpeechPage(),
+      home: SplashPage(),
     );
   }
 }

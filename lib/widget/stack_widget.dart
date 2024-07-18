@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 class SpeechToTextExample extends StatelessWidget {
   final double _confidence;
@@ -14,26 +15,34 @@ class SpeechToTextExample extends StatelessWidget {
       children: [
         Positioned.fill(
           child: Image.asset(
-            "assets/images/fon.png",
+            "assets/images/image.png",
             fit: BoxFit.cover,
           ),
         ),
         // Main Content
         Column(
           children: [
-            AppBar(
-              backgroundColor: Colors.blue,
-              centerTitle: true,
-              title: const Text('Speech to Text Example'),
-            ),
-            Center(
-              child: Text(
-                'Confidence: ${(_confidence * 100.0).toStringAsFixed(1)}%',
-              ),
-            ),
             Expanded(
               child: Column(
                 children: [
+                  const SizedBox(height: 50),
+                  const Text(
+                    'Speech to Text Example',
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                  Text(
+                    'Confidence: ${(_confidence * 100.0).toStringAsFixed(1)}%',
+                    // ignore: prefer_const_constructors
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
                   Container(
                     padding: const EdgeInsets.all(16),
                     child: Text(
@@ -41,7 +50,7 @@ class SpeechToTextExample extends StatelessWidget {
                       style: const TextStyle(
                         fontSize: 32.0,
                         fontWeight: FontWeight.bold,
-                        color: Colors.white,
+                        color: Color.fromARGB(255, 217, 232, 216),
                       ),
                     ),
                   ),
@@ -51,10 +60,11 @@ class SpeechToTextExample extends StatelessWidget {
                       _listen();
                     },
                     child: SizedBox(
-                      height: 180,
-                      width: double.maxFinite,
-                      child: Image.asset("assets/images/mic2.png"),
-                    ),
+                        height: 180,
+                        width: double.maxFinite,
+                        child: Lottie.asset('assets/lottie/mic.json')
+                        // Image.asset("assets/images/mic2.png"),
+                        ),
                   ),
                   const SizedBox(height: 50),
                 ],
